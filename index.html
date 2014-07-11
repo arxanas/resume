@@ -1,0 +1,194 @@
+<!-- Hi! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Waleed Khan's Resume</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/resume.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="row resume-header">
+      <div class="col-xs-6">
+        <h2 class="name">Waleed Khan</h2>
+      </div>
+      <div class="col-xs-6">
+        <ul class="well pull-right list-unstyled">
+          <li>
+            <span class="glyphicon glyphicon-earphone"></span>
+            <span class="contact-item">
+              (989) 928-6220
+            </span>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-envelope"></span>
+            <span class="contact-item">
+              <a href="mailto:me@waleedkhan.name">me@waleedkhan.name</a>
+            </span>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-globe"></span>
+            <span class="contact-item">
+              <a href="http://github.com/arxanas">github.com/arxanas</a>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Education info -->
+    <div class="info-section">
+      <header>
+        <h4>Education</h4>
+      </header>
+
+      <div class="row">
+        <!-- Education -->
+        <section class="col-xs-6">
+          <header>
+            <b>Enrollment</b>
+          </header>
+          <ul>
+            <li>University of Michigan undergraduate</li>
+            <li>CSE major, class of 2017</li>
+            <li>GPA: 4.0</li>
+          </ul>
+        </section>
+
+        <!-- Classes taken -->
+        <section class="col-xs-6">
+          <header>
+            <b>Classes taken</b>
+          </header>
+          <ul>
+            <li>EECS 203 — A+</li>
+            <li>EECS 270 — A</li>
+            <li>EECS 280 — A</li>
+            <li>EECS 281 — A</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <!-- Work experience -->
+    <section class="info-section">
+      <header>
+        <h4>Work experience</h4>
+      </header>
+      <div class="row">
+        <div class="col-md-6">
+          <span class="job-description pull-left">Web developer intern</span>
+          <span class="job-date pull-right">Summer 2011</span>
+          <span class="clearfix"></span>
+
+          <span class="job-employer pull-left">
+            <a href="http://www.samsa.com/">System and Marketing Services of America</a>
+          </span>
+          <span class="job-location pull-right">Saginaw, MI</span>
+          <span class="clearfix"></span>
+
+          <ul>
+            <li>Built and maintained internal task management website.</li>
+            <li>Responsible for independently designing and implementing the
+            web application according to the company's needs.</li>
+            <li>Used HTML, CSS, Javascript, MySQL, and PHP, with 
+            <a href="http://jquery.com/">jQuery</a>,
+            <a href="http://ellislab.com/codeigniter">CodeIgniter</a>, and
+            <a href="http://getbootstrap.com/">Bootstrap.</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <span class="job-description pull-left">Teaching assistant</span>
+          <span class="job-date pull-right">Summer 2012</span>
+          <span class="clearfix"></span>
+
+          <span class="job-employer pull-left">
+            <a href="http://www.svsu.edu/">Saginaw Valley State University</a>
+          </span>
+          <span class="job-location pull-right">Saginaw, MI</span>
+          <span class="clearfix"></span>
+
+          <ul>
+            <li>Program through SVSU to increase math ability of local
+            underprivileged middle-schoolers.</li>
+            <li>Collaborated with teammates to engage students during class
+            activities.</li>
+            <li>Worked one-on-one with assigned children to provide
+            personalized education based on identified deficiencies.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="info-section">
+      <header>
+        <h4>
+          Projects
+          <small class="hidden-print">
+            <a href="http://github.com/arxanas">See more on Github...</a>
+          </small>
+          <small class="visible-print">
+            <a href="http://github.com/arxanas">(More on Github)</a>
+          </small>
+        </h4>
+      </header>
+
+      <div class="row">
+        <div class="col-md-3">
+          <header>
+            <b><a href="http://github.com/arxanas/Cockatrice">Cockatrice</a></b>
+            <small class="languages">C++, Qt</small>
+          </header>
+          <p>
+            An open-source game engine I contribute to. Plays
+            trading-card games, such as Magic: the Gathering, online.
+            Client-server architecture.
+          </p>
+          <p class="hidden-print">
+            <br />
+            (FIXME: How do
+            I specify this is an open-source project I contribute to, not one
+            I made?)
+          </p>
+        </div>
+        <div class="col-md-3">
+          <header>
+            <b><a href="http://github.com/arxanas/mtg-updater">mtg-updater</a></b>
+            <small class="languages">HTML, CSS, PHP, Python</small>
+          </header>
+          <p>
+            Automatically scraped card data from a website for use in Cockatrice,
+            to provide the most up-to-date data available. People downloaded that
+            data more than 40,000 times over the project's lifetime.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <header>
+            <b>class-scheduler</b>
+            <small class="languages">Python</small>
+          </header>
+          <p>
+            Connect to the <a href="http://developer.it.umich.edu/">umich API</a>
+            to find all possible arrangements of schedules for a list of
+            classes semester. Takes intercampus trips into account, and other
+            criteria are easily added (such as lunch).
+          </p>
+        </div>
+        <div class="col-md-3">
+          <header>
+            <b><a href="http://github.com/arxanas/schmacebook">Schmacebook</a></b>
+            <small>HTML, CSS, Javascript, PHP, MySQL</small>
+          </header>
+          A social networking site with news feeds, wall posts, profiles, private
+          messages, likes (and dislikes!), all in real-time.
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

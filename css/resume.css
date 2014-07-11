@@ -1,0 +1,46 @@
+.resume-header {
+    margin-top: 25px;
+}
+
+/* Center with respect to the contact info. */
+.name {
+    line-height: 60px;
+}
+
+@media print {
+    .resume-header {
+        margin-top: 0px;
+    }
+
+    /* Remove Bootstrap's link styles. */
+    a {
+        text-decoration: none;
+    }
+    a:after {
+        content: "" !important;
+    }
+}
+
+/* Vertically center the text relative to its icon. */
+.contact-item {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
+}
+
+.info-section {
+    border-top: solid #DDDDDD 1px;
+}
+
+.job-description {
+    font-weight: bold;
+}
+
+.job-date {
+    font-style: italic;
+}
+
+.languages {
+  color: #666666;
+}
