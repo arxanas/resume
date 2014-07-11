@@ -33,6 +33,18 @@
     border-top: solid #DDDDDD 1px;
 }
 
+.job {
+  padding-right: 30px;
+}
+.project {
+  padding-right: 15px;
+}
+@media print {
+  .job, .project {
+    padding-right: 0px;
+  }
+}
+
 .job-description {
     font-weight: bold;
 }
