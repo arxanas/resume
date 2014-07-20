@@ -4,12 +4,26 @@
 
 /* Center with respect to the contact info. */
 .name {
-    line-height: 60px;
+    line-height: 90px;
+}
+
+ul {
+  padding-left: 20px;
 }
 
 @media print {
+    .container {
+      padding: 0 0.5in;
+
+      font-size: 13px;
+    }
+
     .resume-header {
         margin-top: 0px;
+    }
+
+    .projects-more {
+      font-size: 13.5px;
     }
 
     /* Remove Bootstrap's link styles. */
@@ -26,7 +40,7 @@
     display: inline-block;
     position: relative;
     top: -1px;
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 .info-section {
