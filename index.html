@@ -74,22 +74,23 @@
           <h4>Education</h4>
         </header>
 
-        <div class="row">
+        <!-- Small screens -->
+        <div class="row visible-xs-block visible-sm-block">
           <!-- Enrollment -->
-          <section class="col-xs-6 print-no-collapse">
+          <section class="col-sm-6 print-no-collapse">
             <header>
               <b>Enrollment</b>
             </header>
             <ul>
-              <li>University of Michigan</li>
-              <li>CS-Eng major</li>
-              <li>Class of 2017</li>
-              <li>GPA: 4.0</li>
+              <li>University of Michigan undergraduate.</li>
+              <li>CS-Eng major.</li>
+              <li>Class of 2017.</li>
+              <li>GPA: 4.0 / 4.0.</li>
             </ul>
           </section>
 
           <!-- Classes taken -->
-          <section class="col-xs-6 print-no-collapse">
+          <section class="col-sm-6 print-no-collapse">
             <header>
               <b>Classes taken</b>
             </header>
@@ -99,6 +100,59 @@
               <li>EECS 280 — A</li>
               <li>EECS 281 — A</li>
             </ul>
+          </section>
+        </div>
+
+        <!-- Large screens -->
+        <div class="row hidden-xs hidden-sm">
+          <!-- Enrollment -->
+          <section class="col-md-12 print-no-collapse">
+            <header>
+              <b>Enrollment</b>
+            </header>
+            <p>
+              University of Michigan undergraduate.
+              CS-Eng major, class of 2017.
+              GPA:&nbsp;4.0&nbsp;/&nbsp;4.0.
+            </p>
+          </section>
+
+          <!-- Classes taken -->
+          <section class="col-sm-12 print-no-collapse">
+            <header>
+              <b>Classes taken</b>
+            </header>
+            <table class="courses-table">
+              <thead>
+                <tr>
+                  <th class="column-code">Code</th>
+                  <th class="column-course">Course</th>
+                  <th class="column-grade">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="column-code">EECS 203</td>
+                  <td class="column-course">Discrete Math</td>
+                  <td class="column-grade">A+</td>
+                </tr>
+                <tr>
+                  <td class="column-code">EECS 270</td>
+                  <td class="column-course">Introduction to Logic Design</td>
+                  <td class="column-grade">A</td>
+                </tr>
+                <tr>
+                  <td class="column-code">EECS 280</td>
+                  <td class="column-course">Programming and Introduction to Data Structures</td>
+                  <td class="column-grade">A</td>
+                </tr>
+                <tr>
+                  <td class="column-code">EECS 281</td>
+                  <td class="column-course">Data Structures and Algorithms</td>
+                  <td class="column-grade">A</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
         </div>
       </div>

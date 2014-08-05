@@ -11,6 +11,7 @@ ul {
   padding-left: 20px;
 }
 
+/* Simple print formatting. */
 @media print {
     .container {
       padding: 0 0.5in;
@@ -45,6 +46,15 @@ ul {
 
 .info-section {
     border-top: solid #DDDDDD 1px;
+}
+
+.courses-table {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.column-code, .column-grade {
+    width: 20%;
 }
 
 .job {
