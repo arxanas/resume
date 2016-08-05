@@ -1,0 +1,12 @@
+#!/bin/bash
+readonly TIDY='tidy'
+
+for i in ./*.html; do
+    if ! "$TIDY" -q >/dev/null "$i"; then
+        filename=$(basename "$i")
+        echo >>/dev/stderr "Failed to validate '$filename'."
+        exit 1
+    fi
+done
+
+echo >>/dev/stderr 'Passed HTML validation.'

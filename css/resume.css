@@ -2,7 +2,7 @@
     margin-top: 25px;
 }
 
-/* Center with respect to the contact info. */
+/* Center vertically with respect to the contact info. */
 .name {
     line-height: 90px;
 }
@@ -16,7 +16,7 @@ ul {
     .container {
       padding: 0 0.5in;
 
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .resume-header {
@@ -24,7 +24,7 @@ ul {
     }
 
     .projects-more {
-      font-size: 13.5px;
+      font-size: 13px;
     }
 
     /* Remove Bootstrap's link styles. */
@@ -33,6 +33,23 @@ ul {
     }
     a:after {
         content: "" !important;
+    }
+
+    /*
+     * In some places we want columns to take up different amounts of space
+     * based on whether we're in a print view. Apply one of these classes
+     * to override the column width when in print view, i.e. class="col-md-6
+     * col-print-12."
+     */
+    .col-print-6, .col-print-12 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .col-print-6 {
+        width: 50%;
+    }
+    .col-print-12 {
+        width: 100%;
     }
 }
 
@@ -48,13 +65,10 @@ ul {
     border-top: solid #DDDDDD 1px;
 }
 
-.courses-table {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.column-code, .column-grade {
-    width: 20%;
+.skills-blurb {
+    position: relative;
+    top: -15px;
+    margin-bottom: -15px;
 }
 
 .job {
@@ -106,6 +120,13 @@ ul {
     }
     .print-no-collapse.col-xs-1 .print-no-collapse.col-sm-1 .print-no-collapse.col-md-1 .print-no-collapse.col-lg-1 {
         width: 8.333333333333332%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Center name horizontally on mobile. */
+    .name {
+        text-align: center;
     }
 }
 
