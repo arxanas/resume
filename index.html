@@ -65,90 +65,44 @@
   </header>
 
   <!-- Info -->
-  <div class="info-section">
-    <div class="row">
-      <!-- Education -->
-      <div class="col-md-6 col-print-12 print-no-collapse">
-        <!-- Large screens -->
-        <div class="row">
-          <!-- Education -->
-          <section class="col-xs-6">
-            <header>
-              <h4>Education</h4>
-            </header>
-            <ul>
-              <li>BSE in CS, University of Michigan</li>
-              <li>Expected graduation: April 2016</li>
-              <li>GPA:&nbsp;<strong>3.88&nbsp;/&nbsp;4.00</strong></li>
-            </ul>
-          </section>
-
-          <!-- Coursework -->
-          <section class="col-xs-6">
-            <header>
-              <h4>Coursework</h4>
-            </header>
-            <ul>
-              <li>Data structures and algorithms</li>
-              <li>Introduction to logic design</li>
-              <li>Operating systems</li>
-              <li>Compilers</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="col-md-6 col-print-12">
-        <!-- Text snippet (print) -->
-        <div class="row visible-print skills-blurb">
-          <div class="col-md-12">
-            <header>
-              <h4>Skills</h4>
-            </header>
-
-            <ul>
-              <li>Familiar with full-stack web application development: HTML,
-                CSS, Javascript, jQuery, PHP, MySQL.</li>
-              <li>Strong knowledge of Python. Familiar with C++ and Java.</li>
-              <li>Comfortable working in Unix-like environments on the command
-                line.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- List (web) -->
-        <div class="row hidden-print">
-          <!-- Languages -->
-          <section class="col-xs-6">
-            <header>
-              <h4>Languages</h4>
-            </header>
-
-            <ul>
-              <li>Python</li>
-              <li>C++, Java</li>
-              <li>HTML, CSS, Javascript, PHP</li>
-              <li>MySQL</li>
-            </ul>
-          </section>
-
-          <!-- Tools -->
-          <section class="col-xs-6">
-            <header>
-              <h4>Tools</h4>
-            </header>
-
-            <ul>
-              <li>Familiarity with Unix-like systems</li>
-              <li>Bash</li>
-              <li>Git</li>
-              <li>Make</li>
-            </ul>
-          </section>
-        </div>
-      </div>
+  <div class="info-section row">
+    <!-- Education -->
+    <div class="col-md-4 col-print-4 print-no-collapse">
+      <header>
+        <h4>Education</h4>
+      </header>
+      <ul>
+        <li>University of Michigan (Ann&nbsp;Arbor,&nbsp;MI)</li>
+        <li>B.S.E. in Computer Science (April&nbsp;2016), summa&nbsp;cum&nbsp;laude</li>
+      </ul>
     </div>
+
+    <!-- Languages -->
+    <div class="col-md-4 col-print-4 print-no-collapse">
+      <header>
+        <h4>Languages</h4>
+      </header>
+
+      <ul>
+        <li>Python, C++, Java</li>
+        <li>HTML, CSS, Javascript</li>
+        <li>PHP, Hack, MySQL</li>
+      </ul>
+    </div>
+
+    <!-- Tools -->
+    <section class="col-md-4 col-print-4 print-no-collapse">
+      <header>
+        <h4>Tools</h4>
+      </header>
+
+      <ul>
+        <li>Unix-like systems</li>
+        <li>Bash</li>
+        <li>Git, Mercurial</li>
+        <li>Make</li>
+      </ul>
+    </section>
   </div>
 
   <!-- Work experience -->
@@ -157,10 +111,40 @@
       <h4>Work experience</h4>
     </header>
     <div class="row">
-      <!-- Internship -->
+      <!-- Facebook internship -->
       <div class="col-md-4">
-        <div class="job">
-          <div class="row">
+        <section class="job">
+          <header class="row">
+            <div class="col-xs-6">
+              <div class="job-description">SWE Intern</div>
+              <div class="job-employer">
+                <a href="http://www.facebook.com">Facebook, Inc.</a>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <div class="job-date hidden-print">May 2016 &ndash; Aug. 2016</div>
+              <div class="job-date visible-print">May 2016 &ndash; August 2016</div>
+              <div class="job-location">Seattle, WA</div>
+            </div>
+            <div class="col-xs-12">
+              <small class="languages">HTML, CSS, Javascript, Hack, MySQL</small>
+            </div>
+          </header>
+
+          <ul>
+            <li>Added dependency graph visualization for internal code review
+              tool.</li>
+            <li>Combined deployment methods for configuration changes and
+              source code changes into one workflow.</li>
+            <li>Improved accessibility for test console display.</li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- Amazon internship -->
+      <div class="col-md-4">
+        <section class="job">
+          <header class="row">
             <div class="col-xs-6">
               <div class="job-description">SDE Intern</div>
               <div class="job-employer">
@@ -168,10 +152,14 @@
               </div>
             </div>
             <div class="col-xs-6">
-              <div class="job-date">Summer 2015</div>
+              <div class="job-date hidden-print">May 2015 &ndash; Aug. 2015</div>
+              <div class="job-date visible-print">May 2015 &ndash; August 2015</div>
               <div class="job-location">Seattle, WA</div>
             </div>
-          </div>
+            <div class="col-xs-12">
+              <small class="languages">Java, XML, DynamoDB</small>
+            </div>
+          </header>
 
           <ul>
             <li>Calculated and displayed savings to customers for all digitally
@@ -181,25 +169,28 @@
             <li>Implemented groundwork to predict large-scale pre-order release
               events in order to scale preemptively.</li>
           </ul>
-        </div>
+        </section>
       </div>
 
       <!-- IA job -->
       <div class="col-md-4">
-        <div class="job">
-          <div class="row">
+        <section class="job">
+          <header class="row">
             <div class="col-xs-6">
               <div class="job-description">Instructional Assistant</div>
               <div class="job-employer">
-                  <a href="http://www.umich.edu/">University of Michigan</a>
+                <a href="http://www.umich.edu/">University of Michigan</a>
               </div>
             </div>
             <div class="col-xs-6">
-              <div class="job-date hidden-print">Sept. 2014 &ndash; Present</div>
-              <div class="job-date visible-print">September 2014 &ndash; Present</div>
+              <div class="job-date hidden-print">Sept. 2014 &ndash; Apr. 2016</div>
+              <div class="job-date visible-print">September 2014 &ndash; April 2016</div>
               <div class="job-location">Ann Arbor, MI</div>
             </div>
-          </div>
+            <div class="col-xs-12">
+              <small class="languages">HTML, CSS, Javascript, PHP, Python, Perl, MySQL, Bash</small>
+            </div>
+          </header>
 
           <ul>
             <li>Heavily streamlined staff workflow by overhauling
@@ -209,35 +200,7 @@
             <li>Worked in teams to write homework, project specifications, and
               exams.</li>
           </ul>
-        </div>
-      </div>
-
-      <!-- SAMSA internship -->
-      <div class="col-md-4">
-        <div class="job">
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="job-description">Web Developer Intern</div>
-              <div class="job-employer">
-                  <a href="http://www.samsa.com/">System and Marketing Services of America</a>
-              </div>
-            </div>
-            <div class="col-xs-6">
-              <div class="job-date">Summer 2011</div>
-              <div class="job-location">Saginaw, MI</div>
-            </div>
-          </div>
-
-          <ul>
-            <li>Built and maintained internal task management website.</li>
-            <li>Designed user interface and database schema from scratch.</li>
-            <li class="hidden-print">Used HTML, CSS, Javascript, MySQL, and PHP, with
-            <a href="http://jquery.com/">jQuery</a>,
-            <a href="http://ellislab.com/codeigniter">CodeIgniter</a>, and
-            <a href="http://getbootstrap.com/">Bootstrap.</a>
-            </li>
-          </ul>
-        </div>
+        </section>
       </div>
     </div>
   </section>
@@ -257,58 +220,59 @@
     </header>
 
     <div class="row">
-      <div class="col-md-3">
-        <section class="project">
-          <header>
-            <b><a href="http://github.com/arxanas/Cockatrice">Cockatrice</a></b>
-            <small class="languages">C++, Qt</small>
-          </header>
-          <p>
-          Contributed to an open-source game engine. Plays trading-card games,
-          such as Magic: the Gathering, online. Written with the Qt framework
-          for C++ for GUI and networking.
-          </p>
-        </section>
-      </div>
-      <div class="col-md-3">
-        <section class="project">
-          <header>
-            <b><a href="http://github.com/arxanas/mtg-updater">mtg-updater</a></b>
-            <small class="languages">HTML, CSS, PHP, Python</small>
-          </header>
-          <p>
-          Automatically scraped card data from a Magic: the Gathering website
-          for use in Cockatrice, to provide the most up-to-date data available.
-          Data was downloaded more than 40,000 times over the project's lifetime.
-          </p>
-        </section>
-      </div>
-      <div class="col-md-3">
-        <section class="project">
-          <header>
-            <b><a href="http://github.com/arxanas/schedumich">schedumich</a></b>
-            <small class="languages">Python</small>
-          </header>
-          <p>
-          Connect to the <a href="http://developer.it.umich.edu/">University of
-          Michigan API</a> to find all possible arrangements of schedules for a
-          list of classes for a semester. Takes intercampus trips into account,
-          and other criteria are easily added (such as lunch).
-          </p>
-        </section>
-      </div>
-      <div class="col-md-3">
-        <section class="project">
-          <header>
-            <b><a href="http://github.com/arxanas/schmacebook">Schmacebook</a></b>
-            <small class="languages">HTML, CSS, Javascript, PHP, MySQL</small>
-          </header>
-          <p>
-          A social networking site with news feeds, wall posts, profiles, private
-          messages, likes (and dislikes!), all in real-time.
-          </p>
-        </section>
-      </div>
+      <section class="project col-md-3">
+        <header class="hidden-print">
+          <b><a href="http://github.com/ornicar/lila">Lichess</a></b>
+          <small class="languages">Javascript, Scala, Bash</small>
+        </header>
+        <header class="visible-print">
+          <b><a href="http://github.com/ornicar/lila">Lichess</a></b>
+          <small class="languages">HTML, CSS, Javascript, Scala, Bash</small>
+        </header>
+        <p>
+        Second-most popular chess-playing website on the internet. Added
+        automated setup of the development environment using Vagrant as well
+        as continuous integration with Travis CI, detecting multiple broken
+        builds.
+        </p>
+      </section>
+
+      <section class="project col-md-3">
+        <header>
+          <b><a href="http://github.com/arxanas/mtg-updater">mtg-updater</a></b>
+          <small class="languages">HTML, CSS, PHP, Python</small>
+        </header>
+        <p>
+        Automatically scraped card data from a Magic: the Gathering website
+        for use in Cockatrice, to provide the most up-to-date data available.
+        Data was downloaded more than 40,000 times over the project's lifetime.
+        </p>
+      </section>
+
+      <section class="project col-md-3">
+        <header>
+          <b><a href="http://github.com/arxanas/drafts.ninja">drafts.ninja</a></b>
+          <small class="languages">HTML, CSS, NodeJS</small>
+        </header>
+        <p>
+        Fork of a real-time multiplayer website to build Magic: the Gathering
+        decks competitively. Added several missing features, such as
+        connection indicators, backup card picks, and partially-automated
+        deck construction.
+        </p>
+      </section>
+
+      <section class="project col-md-3">
+        <header>
+          <b><a href="http://github.com/arxanas/Cockatrice">Cockatrice</a></b>
+          <small class="languages">C++, Qt</small>
+        </header>
+        <p>
+        Contributed to an open-source game engine. Plays trading-card games,
+        such as Magic: the Gathering, online. Written with the Qt framework
+        for C++ for GUI and networking.
+        </p>
+      </section>
     </div>
   </section>
 </div>

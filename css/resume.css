@@ -41,9 +41,18 @@ ul {
      * to override the column width when in print view, i.e. class="col-md-6
      * col-print-12."
      */
-    .col-print-6, .col-print-12 {
+    .col-print-3, .col-print-4, .col-print-5, .col-print-6, .col-print-12 {
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .col-print-3 {
+        width: 25%;
+    }
+    .col-print-4 {
+        width: 33%;
+    }
+    .col-print-5 {
+      width: 41.6%;
     }
     .col-print-6 {
         width: 50%;
@@ -63,12 +72,6 @@ ul {
 
 .info-section {
     border-top: solid #DDDDDD 1px;
-}
-
-.skills-blurb {
-    position: relative;
-    top: -15px;
-    margin-bottom: -15px;
 }
 
 .job {
