@@ -4,7 +4,7 @@
 
 /* Center vertically with respect to the contact info. */
 .name {
-    line-height: 90px;
+    line-height: 130px;
 }
 
 ul {
@@ -21,6 +21,11 @@ ul {
 
     .resume-header {
         margin-top: 0px;
+    }
+
+    .name {
+      /* Since the font size in print view is different. */
+      line-height: 95px;
     }
 
     .projects-more {
@@ -66,8 +71,7 @@ ul {
 .contact-item {
     display: inline-block;
     position: relative;
-    top: -1px;
-    margin-left: 3px;
+    top: 1px;
 }
 
 .info-section {
