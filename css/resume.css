@@ -3,8 +3,24 @@
 }
 
 /* Center vertically with respect to the contact info. */
+.name-container {
+    line-height: 130px;
+}
+
 .name {
     line-height: 130px;
+}
+
+.name:before {
+    background-color: #3a1eed;
+    border-radius: 3px;
+    content: "";
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: -6px;
+    vertical-align: middle;
+    width: 30px;
 }
 
 ul {
