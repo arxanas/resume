@@ -27,6 +27,10 @@ ul {
   padding-left: 20px;
 }
 
+.container {
+  max-width: 750px;
+}
+
 /* Simple print formatting. */
 @media print {
     .container {
@@ -36,12 +40,20 @@ ul {
     }
 
     .resume-header {
-        margin-top: 0px;
+      margin-top: 0px;
     }
 
     .name {
       /* Since the font size in print view is different. */
       line-height: 95px;
+      padding-left: 0;
+    }
+
+    .name:before {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      width: 0;
     }
 
     .projects-more {
@@ -81,6 +93,10 @@ ul {
     .col-print-12 {
         width: 100%;
     }
+}
+
+.contact-box {
+  margin-top: 20px;
 }
 
 /* Vertically center the text relative to its icon. */
