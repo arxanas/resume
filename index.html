@@ -74,40 +74,35 @@
   <div class="info-section row">
     <div class="row">
       <!-- Education -->
-      <div class="col-md-4 col-print-4 print-no-collapse">
+      <div class="col-md-6 col-print-6 print-no-collapse">
         <header>
           <h4>Education</h4>
         </header>
         <ul>
-          <li>University of Michigan, 2016</li>
+          <li>University of Michigan, Ann Arbor, 2016</li>
           <li>B.S.E., Computer Science, summa&nbsp;cum&nbsp;laude</li>
         </ul>
       </div>
 
-      <!-- Languages -->
-      <div class="col-md-4 col-print-4 print-no-collapse">
+      <!-- Languages and tools -->
+      <div class="col-md-6 col-print-6 print-no-collapse">
         <header>
-          <h4>Languages</h4>
+          <h4>Languages and tools</h4>
         </header>
 
-        <ul>
-          <li>Python, C++, Java</li>
-          <li>HTML, CSS, Javascript</li>
-          <li>PHP, Hack, MySQL</li>
-        </ul>
+        <div class="col-md-6 col-print-6 print-no-collapse">
+          <ul>
+            <li>OCaml, Javascript</li>
+            <li>Python, C++, Java</li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-print-6 print-no-collapse">
+          <ul>
+            <li>Bash, Linux</li>
+            <li>Git, Mercurial</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Tools -->
-      <section class="col-md-4 col-print-4 print-no-collapse">
-        <header>
-          <h4>Tools</h4>
-        </header>
-
-        <ul>
-          <li>Unix-like systems, Bash</li>
-          <li>Git, Mercurial</li>
-        </ul>
-      </section>
     </div>
   </div>
 
@@ -137,12 +132,14 @@
         </header>
 
         <ul>
-          <li>Migrated the Hack programming language to the Language Server
-            Protocol, adding IDE support for most editors.</li>
-          <li>Created linting and refactoring system for Hack developers to
-            write their own lint rules and refactorings.</li>
-          <li>Improved the latency of internal OCaml IDE tooling by a factor of
-            20.</li>
+          <li>Implemented support for the Language Server Protocol in our
+            internal IDE.</li>
+          <li>Migrated Hack to use the Language Server Protocol, providing
+            support for all major editors.</li>
+          <li>Developed a linting system for Hack code written in Hack itself,
+            making it accessible to library/framework teams.</li>
+          <li>Developed a refactoring system suitable for monorepo-scale code
+            migrations.</li>
         </ul>
       </section>
     </div>
