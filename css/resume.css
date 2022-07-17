@@ -175,7 +175,7 @@ ul {
     }
 }
 
-.job-description {
+.job-description, .job-employer {
     font-weight: bold;
 }
 
@@ -189,4 +189,5 @@ ul {
 
 .languages {
   color: #666666;
+  font-size: smaller;
 }

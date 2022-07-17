@@ -111,13 +111,13 @@
               <h4>Languages and tools</h4>
             </header>
 
-            <div class="col-md-6 col-print-6 print-no-collapse">
+            <div class="col-md-7 col-print-7 print-no-collapse">
               <ul>
-                <li>OCaml, Rust, JS</li>
-                <li>Python, C++, Java</li>
+                <li>OCaml, Scala, Rust</li>
+                <li>Python, C++, Java, JS</li>
               </ul>
             </div>
-            <div class="col-md-6 col-print-6 print-no-collapse">
+            <div class="col-md-5 col-print-5 print-no-collapse">
               <ul>
                 <li>Bash, Linux</li>
                 <li>Git, Mercurial</li>
@@ -137,22 +137,47 @@
         <div class="row">
           <section class="job col-md-12">
             <header class="row">
-              <div class="col-xs-6">
-                <div class="job-description">Software Engineer</div>
-                <div class="job-employer">
-                  <a href="https://www.twitter.com">Twitter, Inc.</a>
+              <div class="col-xs-8">
+                <div>
+                  <span class="job-description">Software Engineer</span>
+                  at
+                  <span class="job-employer">
+                    <a href="https://www.twitter.com">Twitter</a>
+                  </span>
                 </div>
+                <div class="languages">Rust, Scala, Java</div>
               </div>
-              <div class="col-xs-6">
+              <div class="col-xs-4">
                 <div class="job-date">Oct 2020 &ndash; Present</div>
                 <div class="job-location">Seattle, WA</div>
               </div>
-              <div class="col-xs-12">
-                <small class="languages">Scala, Java</small>
-              </div>
             </header>
 
-            <p>Compiler engineer on the Scala Language &amp; Tools team.</p>
+            <p>
+              Compiler engineer on the Scala Language &amp; Tools team. Visiting
+              engineer on Source Control team.
+            </p>
+
+            <ul>
+              <li>
+                Integrated formatting and linting tooling into command-line
+                workflows.
+              </li>
+              <li>
+                Migrated compiler rulesets, code generation pipelines to the
+                <a href="https://bazel.build/">Bazel build system</a>.
+              </li>
+              <li>
+                Improved <code>git rebase</code> time by 10x via
+                <a href="https://blog.waleedkhan.name/in-memory-rebases/"
+                  >sparse in-memory implementation</a
+                >.
+              </li>
+              <li>
+                Developed tool to manage Git sparse checkouts derived from
+                Bazel. Typical <code>git status</code> time: 3sec &rarr; 200ms.
+              </li>
+            </ul>
           </section>
         </div>
 
@@ -160,24 +185,25 @@
         <div class="row">
           <section class="job col-md-12">
             <header class="row">
-              <div class="col-xs-6">
-                <div class="job-description">Software Engineer</div>
-                <div class="job-employer">
-                  <a href="https://www.facebook.com">Facebook, Inc.</a>
+              <div class="col-xs-8">
+                <div>
+                  <span class="job-description">Software Engineer</span>
+                  at
+                  <span class="job-employer">
+                    <a href="https://www.facebook.com">Facebook</a>
+                  </span>
                 </div>
+                <div class="languages">OCaml, Rust, Javascript, Hack</div>
               </div>
-              <div class="col-xs-6">
+              <div class="col-xs-4">
                 <div class="job-date">Oct 2016 &ndash; Sep 2020</div>
                 <div class="job-location">Seattle, WA</div>
-              </div>
-              <div class="col-xs-12">
-                <small class="languages">OCaml, Rust, Javascript, Hack</small>
               </div>
             </header>
 
             <p>
-              Compiler engineer working on improving the scalability of the Hack
-              programming language.
+              Compiler engineer working on improving the scalability of the
+              <a href="https://hacklang.org/">Hack programming language</a>.
             </p>
 
             <ul>
@@ -209,19 +235,18 @@
           <section class="job col-md-12">
             <header class="row">
               <div class="col-xs-6">
-                <div class="job-description">SWE Intern</div>
-                <div class="job-employer">
-                  <a href="https://www.facebook.com">Facebook, Inc.</a>
+                <div>
+                  <span class="job-description">SWE Intern</span>
+                  at
+                  <span class="job-employer">
+                    <a href="https://www.facebook.com">Facebook</a>
+                  </span>
                 </div>
+                <div class="languages">HTML, CSS, Javascript, Hack, MySQL</div>
               </div>
               <div class="col-xs-6">
                 <div class="job-date">May 2016 &ndash; Aug 2016</div>
                 <div class="job-location">Seattle, WA</div>
-              </div>
-              <div class="col-xs-12">
-                <small class="languages"
-                  >HTML, CSS, Javascript, Hack, MySQL</small
-                >
               </div>
             </header>
 
@@ -243,17 +268,18 @@
           <section class="job col-md-12">
             <header class="row">
               <div class="col-xs-6">
-                <div class="job-description">SDE Intern</div>
-                <div class="job-employer">
-                  <a href="https://www.amazon.com">Amazon.com</a>
+                <div>
+                  <span class="job-description">SDE Intern</span>
+                  at
+                  <span class="job-employer">
+                    <a href="https://www.amazon.com">Amazon</a>
+                  </span>
                 </div>
+                <div class="languages">Java, XML, DynamoDB</div>
               </div>
               <div class="col-xs-6">
                 <div class="job-date">May 2015 &ndash; Aug 2015</div>
                 <div class="job-location">Seattle, WA</div>
-              </div>
-              <div class="col-xs-12">
-                <small class="languages">Java, XML, DynamoDB</small>
               </div>
             </header>
 
@@ -275,19 +301,22 @@
           <section class="job col-md-12">
             <header class="row">
               <div class="col-xs-6">
-                <div class="job-description">Instructional Assistant</div>
-                <div class="job-employer">
-                  <a href="https://www.umich.edu/">University of Michigan</a>
+                <div>
+                  <span class="job-description">Instructional Assistant</span>
+                  at
+                  <span class="job-employer">
+                    <a href="https://www.umich.edu/"
+                      >University&nbsp;of&nbsp;Michigan</a
+                    >
+                  </span>
+                </div>
+                <div class="languages">
+                  HTML, CSS, Javascript, PHP, Python, Perl, MySQL, Bash
                 </div>
               </div>
               <div class="col-xs-6">
                 <div class="job-date">Sep 2014 &ndash; Apr 2016</div>
                 <div class="job-location">Ann Arbor, MI</div>
-              </div>
-              <div class="col-xs-12">
-                <small class="languages"
-                  >HTML, CSS, Javascript, PHP, Python, Perl, MySQL, Bash</small
-                >
               </div>
             </header>
 
@@ -327,7 +356,7 @@
                   >git-branchless</a
                 ></b
               >
-              <small class="languages">Rust, 1.3k ★</small>
+              <small class="languages">Rust, 1.7k ★</small>
             </header>
             <p>
               High-velocity, monorepo-scale workflow for Git, based off of the
@@ -340,11 +369,28 @@
           <section class="project col-md-12">
             <header>
               <b
+                ><a href="https://github.com/arxanas/detect-recruiter-spam"
+                  >detect-recruiter-spam</a
+                ></b
+              >
+              <small class="languages">Python, 24 ★</small>
+            </header>
+            <p>
+              Machine-learning email bot which detects unsolicited recruiter
+              email and responds with compensation/leveling requirements.
+            </p>
+          </section>
+        </div>
+
+        <div class="row">
+          <section class="project col-md-12">
+            <header>
+              <b
                 ><a href="https://github.com/arxanas/smashtraining"
                   >Smash Training</a
                 ></b
               >
-              <small class="languages">TypeScript, 14 ★</small>
+              <small class="languages">TypeScript, 16 ★</small>
             </header>
             <p>
               Spaced-repetition training app for the fighting game
