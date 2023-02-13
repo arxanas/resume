@@ -1,3 +1,7 @@
+p:not(:last-child){
+    margin: 0;
+}
+
 .resume-header {
     margin-top: 25px;
 }
