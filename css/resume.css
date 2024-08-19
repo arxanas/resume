@@ -1,197 +1,161 @@
-p:not(:last-child){
+:root {
+    --color: #333;
+    --font-size: 0.875rem;
+    --section-header-font-size: 1.125rem;
+}
+
+@media print {
+    :root {
+        --font-size: 10pt;
+    }
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
-.resume-header {
-    margin-top: 25px;
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: var(--font-size);
+    line-height: 16px;
+    color: var(--color);
+    background-color: #fff;
 }
 
-/* Center vertically with respect to the contact info. */
-.name-container {
-    line-height: 130px;
+a {
+    color: #428bca;
+    text-decoration: none;
 }
 
-.name {
-    line-height: 130px;
-}
-
-.name:before {
-    background-color: #3a1eed;
-    border-radius: 3px;
-    content: "";
-    display: inline-block;
-    height: 30px;
-    margin-right: 10px;
-    margin-top: -6px;
-    vertical-align: middle;
-    width: 30px;
+a:hover {
+    text-decoration: underline;
 }
 
 ul {
-  padding-left: 20px;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin: 2px 0px;
+}
+
+li::marker {
+    font-size: smaller;
 }
 
 .container {
-  max-width: 750px;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Simple print formatting. */
-@media print {
+@media not print {
     .container {
-      padding: 0 0.5in;
-
-      font-size: 12px;
+        padding: 3rem 1rem 0 1rem;
     }
+}
 
-    .resume-header {
-      margin-top: 0px;
+@media (min-width: 1200px) {
+    .container {
+        width: 50rem;
     }
+}
 
-    .name {
-      /* Since the font size in print view is different. */
-      line-height: 95px;
-      padding-left: 0;
+@media (min-width: 992px) {
+    .container {
+        width: 50rem;
     }
+}
 
+@media (min-width: 768px) {
+    .container {
+        width: 50rem;
+    }
+}
+
+/** Header **/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@media not print {
     .name:before {
-      height: 0;
-      margin: 0;
-      padding: 0;
-      width: 0;
-    }
-
-    .projects-more {
-      font-size: 13px;
-    }
-
-    /* Remove Bootstrap's link styles. */
-    a {
-        text-decoration: none;
-    }
-    a:after {
-        content: "" !important;
-    }
-
-    /*
-     * In some places we want columns to take up different amounts of space
-     * based on whether we're in a print view. Apply one of these classes
-     * to override the column width when in print view, i.e. class="col-md-6
-     * col-print-12."
-     */
-    .col-print-3, .col-print-4, .col-print-5, .col-print-6, .col-print-12 {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    .col-print-3 {
-        width: 25%;
-    }
-    .col-print-4 {
-        width: 33%;
-    }
-    .col-print-5 {
-      width: 41.6%;
-    }
-    .col-print-6 {
-        width: 50%;
-    }
-    .col-print-12 {
-        width: 100%;
+        background-color: #3a1eed;
+        border-radius: 3px;
+        content: "";
+        display: inline-block;
+        height: 26px;
+        margin-right: 10px;
+        margin-top: -6px;
+        vertical-align: middle;
+        width: 26px;
     }
 }
 
-.contact-box {
-  margin-top: 20px;
+/** Sections **/
+
+.section-header {
+    border-bottom: solid #eee 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    margin: 5px 0;
 }
 
-/* Vertically center the text relative to its icon. */
-.contact-item {
-    display: inline-block;
-    position: relative;
-    top: 1px;
+.section-header h2 {
+    font-size: var(--section-header-font-size);
+    font-weight: 500;
 }
 
-.info-section {
-    border-top: solid #DDDDDD 1px;
+
+.section-link {
+    font-size: var(--font-size);
 }
 
-.job {
-  padding-right: 30px;
-}
-.project {
-  padding-right: 15px;
+/** Jobs **/
+
+.job-header {
+    margin: 10px 0 5px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
-@media print {
-    .job, .project {
-      padding-right: 0px;
-    }
-    .print-no-collapse {
-      float: left;
-    }
-    .print-no-collapse.col-xs-12 .print-no-collapse.col-sm-12 .print-no-collapse.col-md-12 .print-no-collapse.col-lg-12 {
-        width: 100%;
-    }
-    .print-no-collapse.col-xs-11 .print-no-collapse.col-sm-11 .print-no-collapse.col-md-11 .print-no-collapse.col-lg-11 {
-        width: 91.66666666666666%;
-    }
-    .print-no-collapse.col-xs-10 .print-no-collapse.col-sm-10 .print-no-collapse.col-md-10 .print-no-collapse.col-lg-10 {
-        width: 83.33333333333334%;
-    }
-    .print-no-collapse.col-xs-9 .print-no-collapse.col-sm-9 .print-no-collapse.col-md-9 .print-no-collapse.col-lg-9 {
-        width: 75%;
-    }
-    .print-no-collapse.col-xs-8 .print-no-collapse.col-sm-8 .print-no-collapse.col-md-8 .print-no-collapse.col-lg-8 {
-        width: 66.66666666666666%;
-    }
-    .print-no-collapse.col-xs-7 .print-no-collapse.col-sm-7 .print-no-collapse.col-md-7 .print-no-collapse.col-lg-7 {
-        width: 58.333333333333336%;
-    }
-    .print-no-collapse.col-xs-6 .print-no-collapse.col-sm-6 .print-no-collapse.col-md-6 .print-no-collapse.col-lg-6 {
-        width: 50%;
-    }
-    .print-no-collapse.col-xs-5 .print-no-collapse.col-sm-5 .print-no-collapse.col-md-5 .print-no-collapse.col-lg-5 {
-        width: 41.66666666666667%;
-    }
-    .print-no-collapse.col-xs-4 .print-no-collapse.col-sm-4 .print-no-collapse.col-md-4 .print-no-collapse.col-lg-4 {
-        width: 33.33333333333333%;
-    }
-    .print-no-collapse.col-xs-3 .print-no-collapse.col-sm-3 .print-no-collapse.col-md-3 .print-no-collapse.col-lg-3 {
-        width: 25%;
-    }
-    .print-no-collapse.col-xs-2 .print-no-collapse.col-sm-2 .print-no-collapse.col-md-2 .print-no-collapse.col-lg-2 {
-        width: 16.666666666666664%;
-    }
-    .print-no-collapse.col-xs-1 .print-no-collapse.col-sm-1 .print-no-collapse.col-md-1 .print-no-collapse.col-lg-1 {
-        width: 8.333333333333332%;
-    }
+.job-description {
+    font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    /* Center name horizontally on mobile. */
-    .name {
-        text-align: center;
-    }
+.job-description a {
+    color: var(--color);
 }
 
-@media (min-width: 768px), print {
-    .contact-box, .contact-box-list {
-        float: right;
-    }
+.job-technologies {
+    font-size: smaller;
+    color: #444;
 }
 
-.job-description, .job-employer {
-    font-weight: bold;
-}
-
-.job-date {
-    font-style: italic;
-}
-
-.job-date, .job-location {
+.job-date,
+.job-location {
     text-align: right;
 }
 
-.languages {
-  color: #666666;
-  font-size: smaller;
+/** Projects **/
+
+.project-header {
+    margin-top: 10px;
+}
+
+.project-technologies {
+    font-size: smaller;
+    color: #444;
 }
