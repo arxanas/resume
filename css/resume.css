@@ -166,7 +166,8 @@ ul {
     white-space: nowrap;
 }
 
-.job-description a {
+/* NOTE: `.current-job .job-employer` is scraped by `waleedkhan.name`! */
+.job-employer {
     color: var(--color);
 }
 
