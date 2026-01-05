@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "scripts": {
+    "fmt": "prettier --write .",
+    "serve": "http-server -p ${PORT:-8000}",
+    "test": "vitest run",
+    "install:playwright": "playwright install --with-deps chromium"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.54",
+    "playwright": "^1.57.0"
+  },
+  "devDependencies": {
+    "@expo/spawn-async": "^1.7.2",
+    "@types/node": "^24.10.4",
+    "http-server": "^14.1.1",
+    "pdf-lib": "^1.17.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
+  }
+}

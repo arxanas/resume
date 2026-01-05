@@ -1,9 +1,7 @@
-About
------
+## About
 
-The resume located at http://waleedkhan.name/resume/.
+The resume located at <https://resume.waleedkhan.name/>.
 
-Contributing
-------------
+## Contributing
 
 Sorry, what?

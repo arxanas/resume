@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <symbol id="icon" viewBox="0 0 24 24">
+    <rect x="4" y="4" width="16" height="16" rx="3" ry="3" fill="none" stroke="currentColor" stroke-width="2" />
+    <text
+      x="12"
+      y="16"
+      text-anchor="middle"
+      font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+      font-size="10"
+      font-weight="700"
+      fill="currentColor"
+    >
+      in
+    </text>
+  </symbol>
+</svg>
