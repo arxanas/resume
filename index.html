@@ -134,6 +134,57 @@
           <h2>Experience</h2>
         </header>
 
+        <!-- Figma job -->
+        <article class="job current-job">
+          <header>
+            <div class="col1">
+              <div class="date">
+                <time datetime="2025-01">Jan 2025</time> &ndash; Present
+              </div>
+              <div class="subtitle">Seattle, WA</div>
+            </div>
+            <div class="col2">
+              <ul class="title">
+                <li><a href="https://www.figma.com">Figma</a></li>
+                <li>Software Engineer</li>
+                <li>Environments &amp; Tools</li>
+              </ul>
+              <div class="subtitle">Go, Typescript</div>
+            </div>
+          </header>
+
+          <main>
+            <ul class="col2">
+              <li>
+                Leading team of 6 to build and deploy our internal platform for
+                remote development &amp; background AI agents.
+              </li>
+            </ul>
+          </main>
+        </article>
+
+        <!-- Jujutsu open-source -->
+        <article class="job">
+          <header>
+            <div class="col1">
+              <div class="date">
+                <time datetime="2025-02">Feb 2025</time> &ndash; Present
+              </div>
+              <div class="subtitle">Remote</div>
+            </div>
+            <div class="col2">
+              <ul class="title">
+                <li>
+                  <a href="https://jj-vcs.dev/">Jujutsu VCS</a>
+                </li>
+                <li>Open-Source</li>
+                <li>Core Maintainer</li>
+              </ul>
+              <div class="subtitle">Rust</div>
+            </div>
+          </header>
+        </article>
+
         <!-- Hudson River Trading job -->
         <article class="job current-job">
           <header>
@@ -200,20 +251,9 @@
           <main>
             <ul class="col2">
               <li>
-                Led team of 4 to develop tool to manage Git sparse checkouts
-                derived from <a href="https://bazel.build">Bazel</a>.
-
-                <ul>
-                  <li>
-                    <a
-                      href="https://blog.waleedkhan.name/build-aware-sparse-checkouts/"
-                      >Presented at Git Merge 2022</a
-                    >.
-                  </li>
-                  <li>
-                    Typical <code>git status</code> time: 3sec &rarr; 200ms.
-                  </li>
-                </ul>
+                Led team of 4 to develop tool to derive Git sparse checkouts
+                from <a href="https://bazel.build">Bazel</a>.<br />Typical
+                <code>git status</code> time: 3sec &rarr; 200ms.
               </li>
               <li>
                 Migrated compiler rulesets, code generation pipelines from
@@ -253,12 +293,15 @@
           <main>
             <ul class="col2">
               <li>
-                Formalized and proved the correctness of Hack's incremental
+                Formalized and proved the correctness of
+                <a href="https://hacklang.org/">Hack</a>'s incremental
                 typechecking algorithm.
               </li>
               <li>
-                Migrated Hack to use the Language Server Protocol, providing
-                support for all major editors.
+                Migrated Hack to use the
+                <a href="https://microsoft.github.io/language-server-protocol/"
+                  >Language Server Protocol</a
+                >, providing support for all major editors.
               </li>
               <li>
                 Developed linting system for Hack code, now supporting hundreds
@@ -298,7 +341,7 @@
             </div>
           </header>
 
-          <main>
+          <main class="hidden-print">
             <ul class="col2">
               <li>
                 Created
@@ -335,7 +378,7 @@
             </div>
           </header>
 
-          <main>
+          <main class="hidden-print">
             <ul class="col2">
               <li>
                 Developed alerting for pre-order release events to scale
@@ -369,7 +412,7 @@
             </div>
           </header>
 
-          <main>
+          <main class="hidden-print">
             <ul class="col2">
               <li>
                 Streamlined automatic-grading web application. Core workflow:
@@ -380,62 +423,122 @@
         </article>
       </section>
 
+      <!-- Selected Talks -->
+      <section>
+        <header>
+          <h2>Selected Talks</h2>
+        </header>
+
+        <article class="inline">
+          <header>
+            <div class="date"><time datetime="2022-09">Sep 2022</time></div>
+          </header>
+          <main>
+            <a
+              class="title"
+              href="https://blog.waleedkhan.name/build-aware-sparse-checkouts/"
+              >Build-aware sparse checkouts</a
+            >
+            <div class="subtitle">Git Merge 2022</div>
+          </main>
+        </article>
+
+        <article class="inline">
+          <header>
+            <div class="date"><time datetime="2025-07">Jul 2025</time></div>
+          </header>
+          <main>
+            <a
+              class="title"
+              href="https://blog.waleedkhan.name/searching-source-control-graphs/"
+              >Searching source control graphs</a
+            >
+            <div class="subtitle">Seattle Build Enthusiasts Meetup</div>
+          </main>
+        </article>
+
+        <article class="inline">
+          <header>
+            <div class="date"><time datetime="2024-10">Oct 2024</time></div>
+          </header>
+          <main>
+            <a
+              class="title"
+              href="https://blog.waleedkhan.name/incremental-watchman/"
+              >Incremental processing with Watchman</a
+            >
+            <div class="subtitle">Seattle Build Enthusiasts Meetup</div>
+          </main>
+        </article>
+
+        <article class="inline">
+          <header>
+            <div class="date"><time datetime="2025-10">Oct 2025</time></div>
+          </header>
+          <main>
+            <a
+              class="title"
+              href="https://blog.waleedkhan.name/what-if-sql-were-good/"
+              >Datalog DSL detects defective dependency declarations</a
+            >
+            <div class="subtitle">Seattle Build Enthusiasts Meetup</div>
+          </main>
+        </article>
+      </section>
+
       <!-- Projects -->
       <section>
         <header>
-          <h2>Projects</h2>
+          <h2>Selected Projects</h2>
         </header>
 
-        <article class="project">
+        <article class="inline">
           <header>
             <a class="title" href="https://github.com/arxanas/git-branchless"
               >git-branchless</a
             >
-            <div class="subtitle">3.4k ★</div>
           </header>
           <main>
-            <p>
-              Monorepo-scale workflow for Git, based on the Mercurial workflows
-              at companies like Google and Facebook.
-            </p>
+            <p>Monorepo-scale workflow for Git.</p>
+            <div class="subtitle">3,962&nbsp;★</div>
           </main>
         </article>
 
-        <article class="project">
+        <article class="inline hidden-print">
           <header>
             <a
               class="title"
               href="https://github.com/arxanas/detect-recruiter-spam"
               >detect-recruiter-spam</a
             >
-            <div class="subtitle">31 ★</div>
           </header>
           <main>
             <p>
-              ML email bot (pre-LLM) which detects unsolicited recruiter email
-              and responds with compensation/leveling requirements.
+              ML email bot (pre-LLM). Responds to unsolicited email with
+              leveling requirements.
             </p>
+            <div class="subtitle">32&nbsp;★</div>
           </main>
         </article>
 
-        <article class="project">
+        <article class="inline">
           <header>
             <a class="title" href="https://github.com/arxanas/smashtraining"
               >Smash Training</a
             >
-            <div class="subtitle">24 ★</div>
           </header>
           <main>
             <p>
-              Spaced-repetition training app for the fighting game
+              Spaced-repetition training app for
               <cite
                 ><a
                   href="https://en.wikipedia.org/wiki/Super_Smash_Bros._Ultimate"
                   >Super Smash Bros. Ultimate</a
                 ></cite
               >
-              with ~200 monthly users.
+              (~200&nbsp;monthly&nbsp;users).
             </p>
+            <div class="subtitle">24&nbsp;★</div>
           </main>
         </article>
       </section>
