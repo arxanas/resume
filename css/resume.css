@@ -1,208 +1,644 @@
-:root {
-    --border-color: #ccc;
-    --color: #333;
-    --font-size: 14px;
-    --line-height: 16px;
-    --section-header-font-size: 1.125rem;
-    --job-pill-size: 2rem;
-    --job-pill-padding: 5px;
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("Crimson_Pro/CrimsonPro-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("Crimson_Pro/CrimsonPro-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("Crimson_Text/CrimsonText-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("Crimson_Text/CrimsonText-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Text";
+  src: url("Crimson_Text/CrimsonText-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --font-family-serif-fallback:
+    ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+    Garamond, "Noto Serif", "Liberation Serif", "DejaVu Serif", serif;
+  --font-family-body: "Crimson Text", var(--font-family-serif-fallback);
+  --font-family-heading: "Crimson Pro", var(--font-family-serif-fallback);
+  --font-size: 12pt;
+  --line-height: 1.4;
+  --color: #111;
+  --header-color: #000;
+  --section-header-color: var(--color);
+  --link-color: #0645ad;
+  --section-header-font-size: 13pt;
+  --divider-color: #999;
+  --job-whenwhere-width: 1.35in;
+  --job-column-gap: 14px;
+  --bullet-indent: 1.1rem;
+  --job-header-bg: transparent;
+  --job-block-border: var(--divider-color);
+}
+
+@supports (color: color-mix(in srgb, black, white)) {
+  :root {
+    --job-header-bg: color-mix(in srgb, var(--divider-color) 14%, transparent);
+    --job-block-border: color-mix(in srgb,
+        var(--divider-color) 28%,
+        transparent);
+  }
 }
 
 @media print {
+  :root {
+    --font-size: 10pt;
+    --line-height: 1.12;
+    --section-header-font-size: 13pt;
+    --job-whenwhere-width: 1.15in;
+    --job-column-gap: 14px;
+  }
+
+  @supports (color: color-mix(in srgb, black, white)) {
     :root {
-        --font-size: 10pt;
+      --job-header-bg: color-mix(in srgb,
+          var(--divider-color) 10%,
+          transparent);
+      --job-block-border: color-mix(in srgb,
+          var(--divider-color) 22%,
+          transparent);
     }
+  }
+
+  .job-languages,
+  .job-meta {
+    opacity: 0.75;
+  }
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: var(--font-size);
-    line-height: var(--line-height);
-    color: var(--color);
-    background-color: #fff;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--color);
+  background-color: #fff;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  color: var(--header-color);
+  font-weight: 600;
+  text-transform: none;
+  font-variant-caps: normal;
+  letter-spacing: 0.01em;
 }
 
 a {
-    color: #428bca;
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+@supports (color: color-mix(in srgb, black, white)) {
+
+  .header a,
+  .section-link a {
+    color: color-mix(in srgb, var(--link-color), var(--color) 45%);
+  }
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: none;
+}
+
+a:focus-visible {
+  text-decoration: none;
 }
 
 hr {
-    border: 0;
-    border-top: 1px solid var(--border-color);
-    margin: 10px 0;
+  border: 0;
+  border-top: 1px solid var(--divider-color);
+  margin: 8px 0;
+}
+
+em,
+i {
+  font-style: normal;
 }
 
 li {
-    margin: 2px 0px;
+  margin: 2px 0px;
+  line-height: 1.25;
 }
 
 li::marker {
-    font-size: smaller;
+  font-size: smaller;
 }
 
 ul {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
 }
 
 /** Container **/
 
 .container {
+  display: block;
+  margin: 0 auto;
+  max-width: 8.5in;
+  padding: 0.5in;
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --font-size: 11pt;
+    --section-header-font-size: 12pt;
+    --job-whenwhere-width: 0px;
+    --job-column-gap: 0px;
+  }
+
+  .container {
+    padding: 16px;
+  }
+
+  ul {
+    padding-left: 1.1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 20pt;
+    line-height: 1.05;
+  }
+
+  .header-right {
+    text-align: left;
+    width: 100%;
+  }
+
+  .contact-info {
+    font-size: 9.5pt;
+    gap: 4px;
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+  }
+
+  .contact-info a,
+  .section-link a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .container .section-header {
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 8px;
+    padding: 0 0 4px 0;
+  }
+
+  .container .section-header::before {
+    top: auto;
+    bottom: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--divider-color);
+  }
+
+  .container .section-header h2 {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .container .section-link {
+    position: static;
+    transform: none;
+    padding-left: 0;
+    background-color: transparent;
     display: block;
-    margin: 0 auto;
+    margin-top: 2px;
+    text-align: left;
+  }
+
+  .container .project-header b,
+  .container .project-header .project-technologies {
+    display: block;
+  }
+
+  .container .project-technologies {
+    margin-left: 0;
+  }
+
+  .container .job-header {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .container .job-whenwhere {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .container .job-pill {
+    display: block;
+  }
+
+  .container .job-separator {
+    display: none;
+  }
+
+  .container .job-employer {
+    display: block;
+  }
+
+  .container .job-role-team {
+    display: block;
+  }
+
+  .container .job-role,
+  .container .job-team {
+    display: block;
+  }
+
+  .container .job-languages {
+    display: none;
+  }
+
+  .container .job-date,
+  .container .job-location {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .container .job-date {
+    flex: 0 0 auto;
+  }
+
+  .container .job-location {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .container .job-main {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .container .nowrap {
+    white-space: normal;
+  }
 }
 
-@media not print {
-    .container {
-        padding: 3rem 1rem 0 1rem;
-    }
+code {
+  font-size: 1em;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        width: 50rem;
-    }
-}
+@media print {
+  .container {
+    max-width: none;
+    padding: 0;
+  }
 
-@media (min-width: 992px) {
-    .container {
-        width: 50rem;
-    }
-}
+  hr {
+    margin: 4px 0;
+  }
 
-@media (min-width: 768px) {
-    .container {
-        width: 50rem;
-    }
+  .header {
+    padding: 2px 0 4px 0;
+  }
+
+  .name {
+    font-size: 16.5pt;
+  }
+
+  .header+.section .section-header {
+    margin-top: 4px;
+  }
+
+  .section-header {
+    margin-top: 6px;
+    margin-bottom: 2px;
+    padding: 1px 0;
+  }
+
+  .job-header {
+    grid-template-columns: 1.15in 1fr;
+    margin: 3px 0 2px 0;
+  }
+
+  .job-whenwhere {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .job-description .job-separator,
+  .job-description .job-subteam-sep {
+    opacity: 0.55;
+  }
+
+  li {
+    margin: 0;
+    line-height: 1.12;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  .project-header {
+    margin-top: 6px;
+  }
 }
 
 /** Header **/
 
 .header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px 0 12px 0;
 }
 
 .name {
-    font-size: 30px;
-    font-weight: 500;
+  font-size: 24pt;
+  text-align: left;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: auto;
 }
 
-@media not print {
-    .name:before {
-        background-color: #3a1eed;
-        border-radius: 3px;
-        content: "";
-        display: inline-block;
-        height: 26px;
-        margin-right: 10px;
-        margin-top: -6px;
-        vertical-align: middle;
-        width: 26px;
-    }
+.header-right {
+  text-align: right;
+}
+
+.contact-info {
+  font-size: 10pt;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-info a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.contact-icon {
+  width: 0.9em;
+  height: 0.9em;
+  flex: 0 0 auto;
+  align-self: center;
 }
 
 /** Sections **/
 
 .section-header {
-    border-bottom: solid var(--border-color) 1px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    margin: 5px 0;
+  position: relative;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding: 4px 0;
+  text-align: center;
+}
+
+.section-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px solid var(--divider-color);
 }
 
 .section-header h2 {
-    font-size: var(--section-header-font-size);
-    font-weight: 500;
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  background-color: #fff;
+  font-size: var(--section-header-font-size);
+  font-weight: 600;
+  color: var(--section-header-color);
 }
 
-
 .section-link {
-    font-size: var(--font-size);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 12px;
+  background-color: #fff;
+  font-size: var(--font-size);
 }
 
 /** Jobs **/
 
 .job-header {
-    margin: 10px 0 5px 0;
-    display: flex;
-    align-items: center;
-
-    --job-pill-background-color: #f9f9ff;
-    --job-pill-size: 2rem;
-    --job-pill-padding: 5px;
+  display: grid;
+  grid-template-columns: var(--job-whenwhere-width) 1fr;
+  column-gap: var(--job-column-gap);
+  font-weight: bold;
+  margin: 6px 0 3px 0;
+  background-color: var(--job-header-bg);
+  border: 1px solid var(--job-block-border);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  padding: 2px 6px;
 }
 
+.job-body {
+  margin-left: 0;
+  border: 1px solid var(--job-block-border);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  padding: 3px 6px 4px 6px;
+  padding-left: calc(
+    6px + var(--job-whenwhere-width) + var(--job-column-gap) -
+      var(--bullet-indent)
+  );
+  margin-top: -2px;
+}
+
+.job-body li {
+  font-size: 0.97em;
+  line-height: 1.32;
+}
+
+.job-body>ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.job-body>ul>li {
+  position: relative;
+  padding-left: var(--bullet-indent);
+}
+
+.job-body>ul>li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .job-body {
+    margin-left: 0;
+    padding-left: 6px;
+  }
+
+  .job-body>ul {
+    list-style: disc;
+    padding-left: 1.1rem;
+  }
+
+  .job-body>ul>li {
+    display: list-item;
+  }
+
+  .job-body>ul>li::before {
+    content: none;
+  }
+}
+
+.job-whenwhere {
+  text-align: right;
+  font-weight: normal;
+}
+
+.job-main {
+  min-width: 0;
+}
+
+/* Keeping these classes but adjusting styles to fit the theme */
 .job-pill {
-    background-color: var(--job-pill-background-color);
-    border: solid var(--border-color) 1px;
-    display: flex;
-    flex-direction: column;
-    height: calc(var(--job-pill-size) + var(--job-pill-padding));
-    padding: 1px var(--job-pill-padding) 0 var(--job-pill-padding);
-    /* NOTE: `print-color-adjust` seems to no longer work as desired in Chrome for this case? */
-    print-color-adjust: exact;
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 .job-description {
-    font-weight: 500;
-    display: inline;
-    white-space: nowrap;
+  font-weight: bold;
+  display: block;
 }
 
-/* NOTE: `.current-job .job-employer` is scraped by `waleedkhan.name`! */
 .job-employer {
-    color: var(--color);
+  font-style: normal;
+}
+
+.job-separator {
+  color: var(--divider-color);
+  font-weight: normal;
+  font-size: 0.9em;
+  margin: 0 0.4em;
+}
+
+.job-subteam-sep {
+  display: inline-block;
+  color: var(--divider-color);
+  font-weight: normal;
+  margin: 0 0.5em;
 }
 
 .job-technologies {
-    font-size: smaller;
-    color: #444;
-    display: inline;
-    white-space: nowrap;
+  font-size: smaller;
+  color: #444;
+  display: inline;
+  font-style: normal;
 }
 
-.job-spacer {
-    flex: 1;
+.job-languages {
+  font-size: smaller;
+  color: var(--divider-color);
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.job-meta {
+  font-size: smaller;
+  color: var(--divider-color);
+  display: block;
+  font-style: normal;
+  font-weight: normal;
 }
 
 .job-date,
 .job-location {
-    text-align: right;
-    white-space: nowrap;
+  text-align: right;
+  white-space: nowrap;
+  font-family: var(--font-family-body);
+  font-weight: normal;
 }
 
 .wrap {
-    white-space: normal;
+  white-space: normal;
 }
 
 .nowrap {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 /** Projects **/
 
 .project-header {
-    margin-top: 10px;
+  margin-top: 6px;
+  font-weight: bold;
 }
 
 .project-technologies {
-    font-size: smaller;
-    color: #444;
+  font-size: smaller;
+  color: #444;
+  font-style: normal;
 }
